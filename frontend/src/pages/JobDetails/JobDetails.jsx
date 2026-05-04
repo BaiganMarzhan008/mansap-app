@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Building, DollarSign, Calendar, Briefcase, ChevronLeft, Send, CheckCircle } from 'lucide-react';
 import { AuthContext } from '../../context/AuthContext';
-import api from '../../utils/api';
+import api, { API_BASE_URL } from '../../utils/api';
 import './JobDetails.css';
 
 const JobDetails = () => {
@@ -56,8 +56,8 @@ const JobDetails = () => {
       <div className="job-details-container">
         <div className="job-main-card">
           <div className="job-header-flex">
-            <div className="job-logo-large">
-              {job.logo ? <img src={`http://localhost:5000/uploads/${job.logo}`} alt="logo" /> : <Building size={40} />}
+            <div className="job-details-logo">
+              {job.logo ? <img src={`${API_BASE_URL}/uploads/${job.logo}`} alt="logo" /> : <Building size={40} />}
             </div>
             <div className="job-title-group">
               <h1>{job.title}</h1>

@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { User, Edit, Briefcase, GraduationCap, Star } from 'lucide-react';
 import { AuthContext } from '../../context/AuthContext';
-import api from '../../utils/api';
+import api, { API_BASE_URL } from '../../utils/api';
 import './Profile.css';
 
 const Profile = () => {
@@ -93,7 +93,7 @@ const Profile = () => {
       <div className="profile-header-card">
         <div className="profile-avatar-large">
           {profileData?.avatar ? (
-            <img src={`http://localhost:5000/uploads/${profileData.avatar}`} alt="Avatar" />
+            <img src={`${API_BASE_URL}/uploads/${profileData.avatar}`} alt="Avatar" />
           ) : (
             <User size={64} />
           )}

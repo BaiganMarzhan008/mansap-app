@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['letter-j.png'],
       manifest: {
-        name: 'Mansap App',
-        short_name: 'Mansap',
+        name: 'JobPortal.kz',
+        short_name: 'JobPortal',
         description: 'Жұмыс іздеу платформасы',
         theme_color: '#ffffff',
         background_color: '#ffffff',

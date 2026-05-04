@@ -2,8 +2,8 @@ import { useState, useEffect, useContext, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { io } from 'socket.io-client';
 import { AuthContext } from '../../context/AuthContext';
-import { Send, User, MessageSquare, Bot } from 'lucide-react';
-import api from '../../utils/api';
+import { Search, Send, User, MessageSquare, Bot } from 'lucide-react';
+import api, { API_BASE_URL } from '../../utils/api';
 import './Chat.css';
 
 const Chat = () => {
@@ -24,7 +24,7 @@ const Chat = () => {
   const aiContact = { id: 'ai', email: 'AI Көмекші', role: 'BOT' };
 
   useEffect(() => {
-    const newSocket = io('http://localhost:5000', { query: { userId: user?.id } });
+    const newSocket = io(API_BASE_URL, { query: { userId: user?.id } });
     setSocket(newSocket);
     return () => newSocket.close();
   }, [user]);

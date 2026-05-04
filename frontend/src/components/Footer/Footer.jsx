@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
             <Briefcase size={24} color="var(--primary-color)" />
-            <span>Mansap App</span>
+            <span>JobPortal.kz</span>
           </Link>
           <p>Қазақстандағы ең үздік жұмыс іздеу және карьералық өсу платформасы.</p>
         </div>
@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className='a'>
-          <p>&copy; {new Date().getFullYear()} Mansap App. Барлық құқықтар қорғалған.</p>
+          <p>&copy; {new Date().getFullYear()} JobPortal.kz. Барлық құқықтар қорғалған.</p>
         </div>
       </div>
     </footer>

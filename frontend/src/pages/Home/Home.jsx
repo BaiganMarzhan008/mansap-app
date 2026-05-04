@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Search, Briefcase, Zap, Users, TrendingUp } from 'lucide-react';
-import toast from 'react-hot-toast';
 import './Home.css';
 
 const Home = () => {
@@ -9,47 +7,38 @@ const Home = () => {
       <section className="hero-section animate-fade-in">
         <div className="hero-content">
           <h1 className="hero-title">
-            Өз арманыңыздағы жұмысты <span>бүгін</span> табыңыз
+            JobPortal.kz <span>туралы</span>
           </h1>
           <p className="hero-subtitle">
-            Қазақстанның үздік компанияларынан мыңдаған вакансиялар мен мансаптық мүмкіндіктер.
+            Қазақстандағы ең жылдам дамып келе жатқан IT мамандар мен<br/>жұмыс берушілерді біріктіретін платформа.
           </p>
-          {/* <div className="hero-buttons">
-            <Link to="/jobs" className="btn-primary hero-btn">
-              <Search size={20} /> Жұмыс іздеу
-            </Link>
-            <Link to="/create-job" className="btn-outline hero-btn">
-              <Briefcase size={20} /> Вакансия жариялау
-            </Link>
-          </div>*/}
+        </div>
+        <div className="hero-image">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="People working in office" />
         </div>
       </section>
 
       <section className="features-section">
-        <h2 className="section-title animate-slide-up">Неліктен бізді таңдайды?</h2>
         <div className="features-grid">
           <div className="feature-card animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            <div className="feature-icon zap-icon">
-              <Zap size={32} />
+            <div className="feature-icon" style={{ fontSize: '2rem' }}>
+              🚀
             </div>
-            <h3>Жылдам іздеу</h3>
-            <p>Өзіңізге қажетті вакансияларды санаулы секундтарда тауып, бірден өтініш қалдырыңыз.</p>
+            <h3>Біздің миссиямыз</h3>
           </div>
           
           <div className="feature-card animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="feature-icon users-icon">
-              <Users size={32} />
+            <div className="feature-icon" style={{ fontSize: '2rem' }}>
+              💡
             </div>
-            <h3>Тікелей байланыс</h3>
-            <p>Жұмыс берушілермен ешқандай делдалсыз, тікелей платформа арқылы байланысқа шығыңыз.</p>
+            <h3>Біздің көзқарасымыз</h3>
           </div>
           
           <div className="feature-card animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="feature-icon trending-icon">
-              <TrendingUp size={32} />
+            <div className="feature-icon" style={{ fontSize: '2rem' }}>
+              🤝
             </div>
-            <h3>Мансаптық өсу</h3>
-            <p>Үздік компанияларға жұмысқа орналасып, өз карьераңызды жаңа деңгейге көтеріңіз.</p>
+            <h3>Біздің құндылықтарымыз</h3>
           </div>
         </div>
       </section>

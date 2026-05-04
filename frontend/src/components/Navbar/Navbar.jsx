@@ -29,12 +29,18 @@ const handleLogout = () => {
     <header className="navbar">
       <div className="navbar-container container">
         <Link to="/" className="navbar-logo" onClick={toggleMenu}>
-          <span>Mansap App</span>
+          <span>JobPortal<span style={{ color: 'var(--primary-color)' }}>.kz</span></span>
         </Link>
 
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
-          <Link to="/jobs" onClick={toggleMenu} className="nav-icon-link">
-            <Briefcase size={18}/> Вакансии
+          <Link to="/" onClick={toggleMenu} className="nav-icon-link">
+            Басты бет
+          </Link>
+          <Link to="/" onClick={toggleMenu} className="nav-icon-link">
+            Біз туралы
+          </Link>
+          <Link to="/contact" onClick={toggleMenu} className="nav-icon-link">
+            Байланыс
           </Link>
           
           {user ? (
@@ -65,8 +71,8 @@ const handleLogout = () => {
               )}
 
               {user.role === 'ADMIN' && (
-                <Link to="/admin" onClick={toggleMenu} className="nav-icon-link">
-                  <Shield  size={18} /> Админ
+                <Link to="/admin" onClick={toggleMenu} className="nav-icon-link" style={{ color: '#fbbf24' }}>
+                  ⚙️ Админ панель
                 </Link>
               )}
               
@@ -82,7 +88,7 @@ const handleLogout = () => {
             </>
           ) : (
             <>
-              <Link to="/login" onClick={toggleMenu}>Кіру</Link>
+              <Link to="/login" onClick={toggleMenu} className="nav-icon-link">Жүйеге кіру</Link>
               <Link to="/register" className="btn-primary" onClick={toggleMenu}>Тіркелу</Link>
             </>
           )}

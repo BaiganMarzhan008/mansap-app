@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Building, DollarSign, Calendar, Bookmark } from 'lucide-react';
-import api from '../../utils/api';
+import api, { API_BASE_URL } from '../../utils/api';
 import './JobCard.css';
 
 const JobCard = ({ job, initialIsSaved = false, onRemove }) => {
@@ -31,7 +31,7 @@ const JobCard = ({ job, initialIsSaved = false, onRemove }) => {
     <div className="job-card animate-slide-up">
       <div className="job-card-header">
         <div className="job-logo">
-          {job.logo ? <img src={`http://localhost:5000/uploads/${job.logo}`} alt="logo" /> : <Building size={24} />}
+          {job.logo ? <img src={`${API_BASE_URL}/uploads/${job.logo}`} alt="logo" /> : <Building size={24} />}
         </div>
         <div className="job-info" style={{ flex: 1 }}>
           <h3>{job.title}</h3>
